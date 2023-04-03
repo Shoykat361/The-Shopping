@@ -9,7 +9,11 @@
         android:id="@+id/loginFragment"
         android:name="com.shoykat.theshopping.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signupFragment"
         android:name="com.shoykat.theshopping.SignupFragment"
@@ -19,4 +23,9 @@
             android:id="@+id/action_signupFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.shoykat.theshopping.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" />
 </navigation>

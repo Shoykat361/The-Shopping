@@ -1,4 +1,4 @@
-package com.example.buynow.data.model
+package com.shoykat.theshopping.Model
 
 data class Product (
     val productName:String = "",

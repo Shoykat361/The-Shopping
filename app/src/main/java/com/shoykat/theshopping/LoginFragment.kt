@@ -21,7 +21,7 @@ class LoginFragment : Fragment() {
        binding= FragmentLoginBinding.inflate(inflater,container,false)
         loginViewModel.authStateLD.observe(viewLifecycleOwner) {
             if (it == LoginViewModel.AuthState.AUTHENTICATED) {
-                //findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
+                findNavController().navigate(R.id.action_loginFragment_to_homePageFragment)
             }
         }
         loginViewModel.errMsgLD.observe(viewLifecycleOwner) {
@@ -32,6 +32,7 @@ class LoginFragment : Fragment() {
             val password = binding.PassEt.text.toString()
             // TODO: validate fields
             loginViewModel.loginUser(email, password)
+            //findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
         }
 
 
